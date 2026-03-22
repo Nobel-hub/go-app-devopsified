@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: nobeldhakal123/go-web-app:v1
+        image: nobeldhakal123/go-web-app:v2
         ports:
         - containerPort: 80

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "go-web-app-test-connection"
+  labels:
+    app: go-web-app
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['go-web-app:80']
+  restartPolicy: Never
